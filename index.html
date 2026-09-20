@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>數位衣櫥 2D 穿搭畫布</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- 引進 Fabric.js (畫布引擎) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+  <!-- 引進 前端免費去背庫 -->
+  <script src="https://cdn.jsdelivr.net/npm/@imgly/background-removal@1.4.5/dist/index.js"></script>
+</head>
+<body>
+  <div class="app-container">
+    <!-- 左側：衣櫥側邊欄 -->
+    <div class="sidebar">
+      <h3>我的衣櫥</h3>
+      <input type="file" id="upload-input" accept="image/*" />
+      <div id="wardrobe-list" class="closet-grid"></div>
+    </div>
+
+    <!-- 中間：2D 拼盤畫布 -->
+    <div class="canvas-container">
+      <canvas id="collage-canvas" width="600" height="700"></canvas>
+      <div class="controls">
+        <button id="btn-bring-front">移到最前</button>
+        <button id="btn-send-back">移到最後</button>
+        <button id="btn-delete">刪除單品</button>
+        <button id="btn-export">匯出穿搭照</button>
+        <button id="btn-ai-suggest">OpenRouter AI 分析</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
